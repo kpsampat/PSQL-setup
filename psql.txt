@@ -1,0 +1,8 @@
+sudo apt-get install postgresql
+sudo apt-get install postgresql-client libpq5 libpq-dev
+sudo -u postgres psql
+postgres=# create database mydb;
+postgres=# create user myuser with encrypted password 'mypass';
+postgres=# grant all privileges on database mydb to myuser;
+
+psql -U db_user db_name < dump_name.sql
